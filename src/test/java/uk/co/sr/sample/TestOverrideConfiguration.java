@@ -3,7 +3,6 @@ package uk.co.sr.sample;
 import static uk.co.sr.sample.service.DependencyConstants.SAMPLE_SERVICE;
 
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.contract.stubrunner.StubFinder;
 import org.springframework.context.annotation.Configuration;
 
@@ -11,7 +10,6 @@ import org.springframework.context.annotation.Configuration;
 @Slf4j
 public class TestOverrideConfiguration {
 
-  @Autowired
   public TestOverrideConfiguration(final SampleGatewayProperties properties,
       final StubFinder stubFinder) {
     var stubUrl = stubFinder.findStubUrl(SAMPLE_SERVICE);
